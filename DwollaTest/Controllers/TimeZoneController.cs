@@ -22,9 +22,9 @@ namespace DwollaTest.Controllers
         /// <param name="offset">A valid UTC offset in the format +##:## of -##:##</param>
         /// <returns>A JSON response object with the currentTime and (if requested) the offsetTime</returns>
         [HttpGet(Name = "time")]
-        public ActionResult<TimeZone> Get(string offset = "")
+        public ActionResult<TimeResponse> Get(string offset = "")
         {
-            TimeZone time = new TimeZone();
+            TimeResponse time = new TimeResponse();
             time.currentTime = DateTime.UtcNow;
             if(!string.IsNullOrEmpty(offset))
             {

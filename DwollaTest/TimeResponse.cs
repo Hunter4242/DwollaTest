@@ -1,6 +1,6 @@
 namespace DwollaTest
 {
-    public class TimeZone
+    public class TimeResponse
     {
         public DateTime currentTime { get; set; }
 
